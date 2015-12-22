@@ -1,15 +1,13 @@
 function palindrome(str) {
   
-  var stringLowerCase = "";
+  var stringLowerCase = function(str){
+     str.toLowerCase();
+  };
+  var stringToArray = function(stringLowerCase){stringLowerCase.split("");};
   
-  function processStr(str){
-    stringLowerCase = str.toLowerCase();
-    return stringLowerCase;
-    //remove non-alphanumeric characters
-  }
-
+  console.log(stringToArray);
   
-  function removeChars(stringLowerCase, str){
+  /*function removeChars(stringLowerCase, str){
      for(i=0; i < str.length; i++){
        index = stringLowerCase.indexOf(i);
        value = stringLowerCase.getValue(index);
@@ -17,14 +15,13 @@ function palindrome(str) {
          strLowerCase.split(index);
        }
    }
-  }
   
+     }
   
-  var strRev = function(str){
-    var array = str.split("");
-    array.reverse();
-    return array.join("");
-  };
+  return removeChars();*/
+}
+
+
   
   return true;
 }
