@@ -21,7 +21,7 @@ function palindrome(str) {
 
      
      for(i=0; i < remArray.length; i++){
-      alphaString = stringLowerCase.split(remArray[index]);
+      alphaString = stringLowerCase.split(remArray[i]);
        }
          //add position to an array, then slice all values in the array from the string;
        
