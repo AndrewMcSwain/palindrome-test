@@ -11,10 +11,10 @@ function palindrome(str) {
   
   function removeChars(stringLowerCase, str){
      for(i=0; i < str.length; i++){
-       index = stringLowerCase.indexOf(i);
+       index = i;
        value = stringLowerCase.getValue(index);
        if (value != /\w/){
-         strLowerCase.split(index);
+         //add position to an array, then slice all values in the array from the string;
        }
    }
   }
