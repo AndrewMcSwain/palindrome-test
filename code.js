@@ -2,13 +2,18 @@ function palindrome(str) {
   
   var stringLowerCase = "";
   var alphaString = "";
+  var strRev = function(str){
+    var array = alphaString.split("");
+    array.reverse();
+    return array.join("");
+  };
   
   function processStr(str){
     stringLowerCase = str.toLowerCase();
     return stringLowerCase;
     //remove non-alphanumeric characters
   }
-
+  
   
   function removeChars(stringLowerCase, str){
      for(i=0; i < str.length; i++){
@@ -18,34 +23,27 @@ function palindrome(str) {
        if (value != /\w/){
            remArray.push(index);}
        }
-
-     
      for(i=0; i < remArray.length; i++){
       alphaString = stringLowerCase.split(remArray[i]);
        }
          //add position to an array, then slice all values in the array from the string;
        
-       }
-   }
-  }
+    }
+    
+  return removeChar(stringLowerCase, str);
+  return processStr(str);
   
-  
-  var strRev = function(str){
-    var array = str.split("");
-    array.reverse();
-    return array.join("");
-  };
-  
+  if(strRev == str){
   return true;
-}
+  };
+};
 
 
 
 palindrome("eye");
 
   
-  if(strRev == str){
-  return true;}
+
 }
 
 
