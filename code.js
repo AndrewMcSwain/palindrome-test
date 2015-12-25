@@ -16,9 +16,9 @@ function palindrome(str) {
   
   
   function removeChars(stringLowerCase, str){
-     for(i=0; i < str.length; i++){
+    var remArray = []; 
+    for(i=0; i < str.length; i++){
        index = i;
-       var remArray = [];
        value = stringLowerCase.getValue(index);
        if (value != /\w/){
            remArray.push(index);}
@@ -29,21 +29,12 @@ function palindrome(str) {
          //add position to an array, then slice all values in the array from the string;
        
     }
-    
-  return removeChar(stringLowerCase, str);
-  return processStr(str);
-  
-  if(strRev == str){
+  if (strRev == str){
   return true;
-  };
-};
-
-
-
-palindrome("eye");
-
+  }  
   
-
+  processStr(str);  
+  removeChars(stringLowerCase, str);
 }
 
 
@@ -51,4 +42,7 @@ palindrome("eye");
 palindrome("eye");
 
   
-//in production version change to array and reverse it, then run removeChar process on reversed array then replace str with unreversed and processed version, then compare to see if it's a palindrome.
+
+
+
+
