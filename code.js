@@ -1,6 +1,7 @@
 function palindrome(str) {
   
   var stringLowerCase = "";
+  var alphaString = "";
   
   function processStr(str){
     stringLowerCase = str.toLowerCase();
@@ -12,9 +13,18 @@ function palindrome(str) {
   function removeChars(stringLowerCase, str){
      for(i=0; i < str.length; i++){
        index = i;
+       var remArray = [];
        value = stringLowerCase.getValue(index);
        if (value != /\w/){
+           remArray.push(index);}
+       }
+
+     
+     for(i=0; i < remArray.length; i++){
+      alphaString = stringLowerCase.split(remArray[index]);
+       }
          //add position to an array, then slice all values in the array from the string;
+       
        }
    }
   }
