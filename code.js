@@ -19,7 +19,7 @@ function palindrome(str) {
     var remArray = []; 
     for(i=0; i < str.length; i++){
        index = i;
-       value = stringLowerCase.getValue(index);
+       value = stringLowerCase.charAt(index); //change getValue() to charAt()
        if (value != /\w/){
            remArray.push(index);}
        }
