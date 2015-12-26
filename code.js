@@ -2,33 +2,33 @@ function palindrome(str) {
   
   var stringLowerCase = "";
   var alphaString = "";
-  var strRev = function(str){
+  var strRev = function(){
     var array = alphaString.split("");
     array.reverse();
     return array.join("");
   };
   
-  function processStr(str){
+  function processStr(){
     stringLowerCase = str.toLowerCase();
     return stringLowerCase;
     //remove non-alphanumeric characters
   }
   
   
-  function removeChars(stringLowerCase, str){
+  function removeChars(str){
     var remArray = []; 
     for(i=0; i < str.length; i++){
        index = i;
        value = stringLowerCase.charAt(index); //change getValue() to charAt()
        if (value != /\w/){
-           remArray.push(index);}
-       }
+           remArray.push(index);
+       		}
+     }	
      for(i=0; i < remArray.length; i++){
-      alphaString = stringLowerCase.split(remArray[i]);
-       }
-         //add position to an array, then slice all values in the array from the string;
-       
-    }
+     	alphaString = stringLowerCase.split(remArray[i]);
+     }       
+}
+
   if (strRev == str){
   return true;
   }  
