@@ -26,4 +26,6 @@ function palindrome(str) {
     return array.join("");
   };
   
+  //need to compare strRev to str and if they are the same return true.
+  
 palindrome("eye");
