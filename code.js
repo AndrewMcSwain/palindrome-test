@@ -17,7 +17,7 @@ function palindrome(str) {
       } 
 //remove the unwanted characters
       for(i = 0; i < stringLowerCase.length; i++){
-        alphaNumericSting = stringLowerCase.slice(removeArray[i],removeArray[i]);
+        alphaNumericString = stringLowerCase.slice(removeArray[i],removeArray[i]);
         removeArray = removeArray.map(function(num) {return num - 1;});  
        }
     return alphaNumericString;
