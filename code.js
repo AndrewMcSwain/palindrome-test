@@ -5,7 +5,7 @@ function palindrome(str) {
     var alphaNumeric = function(){
       var removeArray = [];  
       var alphaNumericString = "";
-      for(i = 0; i < stringLowerCase.lengh; i++){
+      for(i = 0; i < stringLowerCase.length; i++){
         var alphaNumericChar = stringLowerCase.charAt(i);
         var alphaNumericIndex = i;
         
