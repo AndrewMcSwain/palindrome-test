@@ -3,12 +3,14 @@ function palindrome(str) {
     var stringLowerCase = str.toLowerCase();
 //remove all non-alphanumeric characters without .replace
     var alphaNumeric = function(){
+      var removeArray = [];  
+      var alphaNumericString = "";
       for(i = 0; i < stringLowerCase.lengh; i++){
         var alphaNumericChar = stringLowerCase.charAt(i);
         var alphaNumericIndex = i;
-        removeArray = [];
+        
 //find the unwanted charactes
-        if (alphaNumericChar != /\w/ || /\d/){
+        if (alphaNumericChar != /\w/ || /\d/ || /\s/){
           removeArray.push(alphaNumericIndex);
           }
         return removeArray;
@@ -22,12 +24,12 @@ function palindrome(str) {
     };
 //reverse the string cleaned of unwanted characters  
   var revAlphaNumeric = function(){
-    var alphaNumericArray = alphaNumericString.split(" ");
+    var alphaNumericArray = alphaNumeric().split(" ");
     var reverseAlphaNumericArray = alphaNumericArray.reverse();
     var reverseAlphaNumericString = reverseAlphaNumericArray.join();
     return reverseAlphaNumericString;
   };
-  
+
   function compare(string, revstring){
     if (string == revstring)
       return true;
@@ -35,7 +37,7 @@ function palindrome(str) {
       return false;
   }
   
-  return compare(alphaNumeric, revAlphaNumeric);
+  return compare(alphaNumeric(), revAlphaNumeric());
  
 }
-palindrome("WHAT");
+palindrome("not a palindrome");
