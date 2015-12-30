@@ -1,36 +1,35 @@
 function palindrome(str) {
- 
-  //make the string lower case
-  var stringLowerCase = function processStr(str){
-    stringLowerCase = str.toLowerCase();
-    return stringLowerCase;
-    };
-
-  //remove all non alpha characters
-  var alphaString = function removeChars(stringLowerCase){
-    var remArray = []; 
-    for(var i=0; i < stringLowerCase.length; i++){
-      var index = i;
-      var value = stringLowerCase.charAt(index); 
-      if (value !== /\w/ === true){
-        remArray.push(index);
+//lower case it
+    var stringLowerCase = str.toLowerCase();
+//remove all non-alphanumeric characters without .replace
+    var removeArray = [];  
+    var alphaNumericString = "";
+//find the unwanted characters
+    for(i = 0; i < stringLowerCase.length; i++){
+      var alphaNumericChar = stringLowerCase.charAt(i);
+      var alphaNumericIndex = i;
+      if (alphaNumericChar != /\w/ || /\d/ || /\s/){
+          removeArray.push(alphaNumericIndex);
+          }
+      } 
+//remove the unwanted characters
+      for(i = 0; i < stringLowerCase.length; i++){
+        alphaNumericString = stringLowerCase.slice(removeArray[i], removeArray[i]);
+        removeArray = removeArray.map(function(num) {return num - 1;});  
        }
-    }	
-    for(var i=0; i < remArray.length; i++){
-      alphaString = stringLowerCase.split(remArray[i]);
-    }       
-  };
-  //reverse the formatted string
-  var strRev = function(){
-    var array = alphaString.split("");
-    array.reverse();
-    return array.join("");
-  };
+//reverse the string cleaned of unwanted characters  
+    var alphaNumericArray = alphaNumericString.split("");
+    var reverseAlphaNumericArray = alphaNumericArray.reverse();
+    var reverseAlphaNumericString = reverseAlphaNumericArray.join();
+//compare the value of two strings
+  function compare(string, revstring){
+    if (string === revstring)
+      return true;
+    else
+      return false;
+  }
  
-  if (alphaString = strRev === true)
- 	return true;
-  else return false;
-  
-  //need to compare strRev to str and if they are the same return true.
-  
+  return compare(alphaNumericString, revAlphaNumericString);
+
+}
 palindrome("eye");

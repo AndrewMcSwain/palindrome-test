@@ -11,11 +11,10 @@ function palindrome(str) {
       if (alphaNumericChar != /\w/ || /\d/ || /\s/){
           removeArray.push(alphaNumericIndex);
           }
-      return removeArray;
       } 
 //remove the unwanted characters
       for(i = 0; i < stringLowerCase.length; i++){
-        var alphaNumericString = stringLowerCase.slice(removeArray[i], removeArray[i]);
+        alphaNumericString = stringLowerCase.slice(removeArray[i], removeArray[i]);
         removeArray = removeArray.map(function(num) {return num - 1;});  
        }
 //reverse the string cleaned of unwanted characters  
@@ -30,7 +29,9 @@ function palindrome(str) {
       return false;
   }
  
-  return compare(alpha(), revAlphaNumeric());
+  return compare(alphaNumericString, revAlphaNumericString);
 
 }
 palindrome("eye");
+palindrome("almoststomla");
+palindrome("E1YE");
