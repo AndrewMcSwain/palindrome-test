@@ -29,7 +29,7 @@ function palindrome(str) {
       return false;
   }
  
-  return compare(alphaNumericString, revAlphaNumericString);
+  return compare(alphaNumericString, reverseAlphaNumericString);
 
 }
 palindrome("eye");
