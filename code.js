@@ -20,7 +20,7 @@ function palindrome(str) {
 //reverse the string cleaned of unwanted characters  
     var alphaNumericArray = alphaNumericString.split("");
     var reverseAlphaNumericArray = alphaNumericArray.reverse();
-    var reverseAlphaNumericString = reverseAlphaNumericArray.join();
+    var reverseAlphaNumericString = reverseAlphaNumericArray.join("");
 //compare the value of two strings
   function compare(string, revstring){
     if (string === revstring)
