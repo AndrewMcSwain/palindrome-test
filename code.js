@@ -23,7 +23,7 @@ function palindrome(str) {
     var reverseAlphaNumericString = reverseAlphaNumericArray.join("");
 //compare the value of two strings
   function compare(string, revstring){
-    if (string === revstring)
+    if (string == revstring)
       return true;
     else
       return false;
