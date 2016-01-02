@@ -1,9 +1,8 @@
-function palindrome(str){
-stringLowerCase = str.toLowerCase();
+function cleanArray(str){
 removeArray = [];
-for(i = 0; i < stringLowerCase.length; i++){
-  var alphaNumericChar = stringLowerCase.charAt(i);
-  var alphaNumericIndex = i;
+for(i = 0; i < str.length; i++){
+  var alphaNumericChar = str.charAt(i);
+  var alphaNumericIndex = i;a
   var isLetter = /\w/.test(alphaNumericChar);
   var isNumber = /\d/.test(alphaNumericChar);
   if (isLetter === false && isNumber === false){
@@ -11,7 +10,6 @@ for(i = 0; i < stringLowerCase.length; i++){
       }
    	}
 return console.log(removeArray);
-  
 }
 
-palindrome("this is the master race of gerbil fuckers");
+cleanArray(stringLowerCase)
