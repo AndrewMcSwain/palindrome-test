@@ -1,15 +1,13 @@
-function cleanArray(str){
-removeArray = [];
-for(i = 0; i < str.length; i++){
-  var alphaNumericChar = str.charAt(i);
-  var alphaNumericIndex = i;a
-  var isLetter = /\w/.test(alphaNumericChar);
-  var isNumber = /\d/.test(alphaNumericChar);
-  if (isLetter === false && isNumber === false){
-    	removeArray.push(alphaNumericIndex);
-      }
-   	}
-return removeArray;
+function cleanString(string, array){
+  var l = array.length;
+  var concatenated = "";
+  for(var i = 0; i < l; i++){
+  	 var beg = string.slice(0, array[i]);
+     var next = array[i] + 1;
+     var end = string.slice(next, l);
+  	 concatenated = beg + end;
+  }
+  console.log(concatenated);
 }
 
-cleanArray(stringLowerCase)
+cleanString("this is the master race of gerbils", [3,5,7,10]);
