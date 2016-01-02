@@ -9,7 +9,7 @@ for(i = 0; i < str.length; i++){
     	removeArray.push(alphaNumericIndex);
       }
    	}
-return console.log(removeArray);
+return removeArray;
 }
 
 cleanArray(stringLowerCase)
