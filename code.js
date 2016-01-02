@@ -3,20 +3,24 @@ function cleanString(string, array){
   var stringLength = string.length;
   var concatenated = "";
   for(var i = 0; i < arrayLength; i++){
-     console.log("array: " + array[i]);
+     
   	 var beg = string.slice(0, array[i]);
-     console.log("beg: " + beg);
      var next = array[i]
-     console.log("next: " + next);
      var end = string.slice(next, stringLength);
+     //var newBeginning = end;
+   	 concatenated = beg + end;
+    
+     console.log("\narray: " + array[i]);
+     console.log("beg: " + beg);
+     console.log("next: " + next);
      console.log("end: " + end);
-  	 concatenated = beg + end;
+    
      /*for(var a = 0; a < arrayLength; i++){
        array[a] = array[a]-1;*/
      }
      
  
-  console.log("concatenated is: " + concatenated);
+  console.log("\nconcatenated is: " + concatenated);
 }
 
 cleanString("this is the master race of gerbils", [1,3]);
