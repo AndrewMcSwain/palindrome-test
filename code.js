@@ -1,13 +1,12 @@
-function cleanString(string, array){
+function cleanString(string){
   var stringVar = string;
-  var arrayVar = array;
+  var arrayVar = "";
   var stringLength = string.length;
-  var arrayLength = array.length;
+  var theRestArray = [];
+  var removeArray = [];
   console.log(string);
-  theRestArray = [];
-  removeArray = [];
   
-  function cleanArray(string, array){
+  function cleanArray(string){
       for(i = 0; i < str.length; i++){
           var alphaNumericChar = str.charAt(i);
           var alphaNumericIndex = i;
@@ -31,6 +30,7 @@ function cleanString(string, array){
             console.log("beg: " + beg);
             console.log("rest: " + rest)
             }
+    var arrayLength = removeArray.length;
     var end = string.slice(array[arrayLength-1],stringLength);
     theRestArray.push(end);
     console.log(theRestArray);
@@ -38,7 +38,8 @@ function cleanString(string, array){
     console.log(newString);
     return newString;
   }
-   cleanArray(stringVar, arrayVar);    
-   sliceAndDice(stringVar, arrayVar);
+   console.log(cleanArray(stringVar));   
+   console.log(sliceAndDice(stringVar, removeArray));
 }
-cleanString("thisozjahmasterrace of gerbil kind", removeArray);
+}
+cleanString("thisozjahmasterrace2of gerbil kind");
