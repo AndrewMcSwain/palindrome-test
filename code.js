@@ -42,10 +42,10 @@ function sliceAndDice(string, array){
         	newArray.push(after);
         	
         	console.log("\narray[i]: " + array[i]);
-          	console.log("newArray: " + newArray);
-            console.log("before: " + before);
-            console.log("after: " + after)
-            }
+          console.log("newArray: " + newArray);
+          console.log("before: " + before);
+          console.log("after: " + after)
+          }
     
       var end = string.slice(array[arrayLength-1],stringLength);
       newArray.push(end);
