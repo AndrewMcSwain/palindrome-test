@@ -1,36 +1,29 @@
-function cleanString(string, array){
-  var arrayLength = array.length;
+function cut(string, array){
+  var stringVar = string;
+  var arrayVar = array;
   var stringLength = string.length;
-  var concatenated = "";
-  var newBeginning = 0;
-  var theRestArray = [];
-  for(var i = 0; i < arrayLength; i++){
-    
-  	 var beg = string.slice(newBeginning, array[i]);
-     var slice = beg.length - 1;
-     var theRest = beg.slice(newBeginning, slice);
-     theRestArray.push(theRest);
-     var next = array[i];
-     var end = string.slice(next, stringLength);
-     concatenated = theRest + end ;
-    
-     if (array[i] !== 0) newBeginning = array[i] - 1;
-     else newBeginning = 0;
-    
-     console.log("\narray: " + array[i]);
-     console.log("beg: " + beg);
-     console.log("theRest: " + theRest);
-     console.log("theRestArray: " + theRestArray);
-     console.log("next: " + next);
-     console.log("end: " + end);
-     console.log("conca; " + concatenated);
-    
-     /*for(var a = 0; a < arrayLength; i++){
-       array[a] = array[a]-1;*/
-     }
-     
- 
-  console.log("\nconcatenated is: " + concatenated);
-}
+  var arrayLength = array.length;
+  console.log(string);
+  theRestArray = [];
+  
+  function sliceAndDice(string, array){
+      for(i=0; i < arrayLength; i++){
+        	//slice and dice
+            var beg = string.slice(array[i]-1, array[i]);
+            var rest = string.slice(array[i-1], array[i]-1);
+        	theRestArray.push(rest);
+        	
+        	
 
-cleanString("this is the master race of gerbils", [3,8]);
+        	console.log("\narray[i]: " + array[i]);
+          	console.log("theRestArray: " + theRestArray);
+            console.log("beg: " + beg);
+            console.log("rest: " + rest)
+            }
+    var end = string.slice(array[arrayLength],stringLength);
+    console.log(arrayLength);
+    theRestArray.push(end);
+  }
+  return sliceAndDice(stringVar, arrayVar);
+}
+cut("thisozjahmasterrace of gerbil kind", [4, 8, 15]);
