@@ -1,4 +1,4 @@
-function cut(string, array){
+function cleanString(string, array){
   var stringVar = string;
   var arrayVar = array;
   var stringLength = string.length;
@@ -13,17 +13,18 @@ function cut(string, array){
             var rest = string.slice(array[i-1], array[i]-1);
         	theRestArray.push(rest);
         	
-        	
-
         	console.log("\narray[i]: " + array[i]);
           	console.log("theRestArray: " + theRestArray);
             console.log("beg: " + beg);
             console.log("rest: " + rest)
             }
-    var end = string.slice(array[arrayLength],stringLength);
-    console.log(arrayLength);
+    var end = string.slice(array[arrayLength-1],stringLength);
     theRestArray.push(end);
+    console.log(theRestArray);
+    var newString = theRestArray.join("");
+    console.log(newString);
+    return newString;
   }
   return sliceAndDice(stringVar, arrayVar);
 }
-cut("thisozjahmasterrace of gerbil kind", [4, 8, 15]);
+cleanString("thisozjahmasterrace of gerbil kind", [1, 8, 15]);
