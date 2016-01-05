@@ -8,11 +8,12 @@ function palindrome(string){
   
   //string to lower-case
   function toLowerCase(string){
-  	return stringVar = string.toLowerCase();
+  stringVar = string.toLowerCase();
+  return stringVar;
   }
   
   //create an array of characters that meet (or don't meet) a specific criteria 
-var removeArray = [];
+var removeArray = [3];
 
 function cleanArray(string){
       for(i = 0; i < string.length; i++){
@@ -44,7 +45,7 @@ function sliceAndDice(string, array){
         	console.log("\narray[i]: " + array[i]);
           console.log("newArray: " + newArray);
           console.log("before: " + before);
-          console.log("after: " + after)
+          console.log("after: " + after);
           }
     
       var end = string.slice(array[arrayLength-1],stringLength);
@@ -67,19 +68,23 @@ function reverse(input){
 }
 
   //compare the value of two strings
-  function compare(string, revstring){
+function compare(string, revstring){
     if (string == revstring)
       return true;
     else
       return false;
   }
-  
-  toLowerCase(stringVar); // make string lowercase
-  cleanArray(stringVar); //locate unwanted characters; add them to an array  
+  console.log("stringVar before: " + stringVar);
+  toLowerCase(stringVar); // make string lowercase ; outputs change the global stringVar
+  console.log("stringVar after: " + stringVar);
+  cleanArray(stringVar); //locate unwanted characters; add them to an array. returns removeArray  
+  console.log("removeArray " + removeArray);
   sliceAndDice(stringVar, removeArray); //remove unwanted characters according to array; creates newString and newArray
+  console.log("newString" + newString);
   reverse(newString); //reverse the string or array
-  compare(newString, reverseString)
+  console.log("reverseString" + reverseString);
+  return compare(newString, reverseString);
 
 }
 
-palindrome("thisozjahmasterrace2of gerbil kind");
+palindrome("thisozJahmasterrace2of gerbil kind");
